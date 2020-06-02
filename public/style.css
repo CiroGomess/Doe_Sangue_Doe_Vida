@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+}
+
+
+/* Aliamneto, Espaçamentos, Larguras e Alturas*/
+header, main, footer{
+    text-align: center;
+}
+header, .form, main{
+    margin: 0 auto 70px auto;
+    
+    /* Limites dos elementos da Pagina*/
+    width: 90%;
+    max-width: 500px;   
+}
+
+header button{
+    margin-top: 16px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #FF4F4F;
+    color: white;
+    font-weight: bold;
+}
+
+header h1, main h2{
+    margin-bottom: 70px;
+}
+
+header p {
+    font-size: 14px;
+}
+
+h1, h2{
+    color: #000000cc;
+}
+
+.form h2{
+    text-align: right;  
+    color: #ffffffee;
+    font-size: 18px;
+}
+
+/* FORM */
+section.form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 45px;
+    align-items: center;
+    background-color: #FF4F4F;
+    padding: 16px 64px;
+    border-radius: 15px;
+}
+
+form input, form button{
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 1px #ffffff88 solid;
+    
+}
+form input{
+    background-color: transparent;
+    color: white;
+}
+form input::placeholder{
+    color: #ffffffaa;
+}
+
+form button{
+    font-weight: bold;
+}
+
+
+section.donors{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.blood{
+    color: #FF4F4F;
+    font-weight: bold;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+ 
+}
+
+.blood::before{
+    content: "";
+    background-color: #FF4F4F11;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+
+    /*Fazer a gotinha*/
+    border-radius: 50%;
+    border-top-right-radius: 0;
+    transform: rotate(-45deg);
+}
+
+.donor p{
+    margin-top: 24px;
+    margin-bottom: 44px;
+    font-size: 14px;
+}
+
+main h2 span{
+    color: #FF4F4F;
+}
+
+footer{
+    margin-top: auto;
+    padding: 16px;
+}
+
+
+body::-webkit-scrollbar{
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: #FF4F4F;
+    border-radius: 8px;
+}
+
+/* Funcionalidades com JavaScript */
+
+section.form{
+    transition: all 400ms;
+}
+
+section.form.hide{
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin-top: -70px;
+}
